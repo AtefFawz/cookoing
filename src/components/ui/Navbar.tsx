@@ -1,0 +1,145 @@
+"use client";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { useRef } from "react";
+import DensityMediumIcon from "@mui/icons-material/DensityMedium";
+import CloseIcon from "@mui/icons-material/Close";
+import Button from "@mui/material/Button";
+import Switched from "../shared/components/Switched";
+
+interface dataType {
+  name: string;
+  path: string;
+}
+
+export const data: dataType[] = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/aboutUs" },
+  { name: "Recipes", path: "/recipes" },
+  { name: "Blog", path: "/blog" },
+  { name: "Contact", path: "/contactUs" },
+];
+
+export default function Navbar() {
+  const pathname = usePathname(); // ✅ Get current url
+  const mobileNavRef = useRef<HTMLDivElement | null>(null);
+
+  function toggleMobileNav() {
+    mobileNavRef.current?.classList.toggle("showNav");
+  }
+
+  // ✅ Desktop links
+  const desktopLinks = data.map((item, ind) => (
+    <ul key={ind}>
+      <li
+        className={`font-bold text-xl md:text-lg lg:text-xl ${
+          pathname === item.path
+            ? "text-blue-500 md:border-b-2 border-blue-600"
+            : "text-gray-600"
+        }`}
+      >
+        <Link href={item.path}>{item.name}</Link>
+      </li>
+    </ul>
+  ));
+
+  // ✅ Mobile links
+  const mobileLinks = data.map((item, ind) => (
+    <Link
+      key={ind}
+      href={item.path}
+      className={`font-bold text-xl ${
+        pathname === item.path ? "text-blue-500 " : "text-gray-600"
+      }`}
+      onClick={toggleMobileNav}
+    >
+      {item.name}
+    </Link>
+  ));
+
+  return (
+    <header className="overflow-hidden md:px-3 lg:px-4 md:py-7 fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-transparent shadow-lg">
+      <div className="container mx-auto">
+        {/* ✅ Desktop */}
+        <div className="hidden md:block">
+          <header className="flex flex-row justify-between items-center gap-x-7">
+            <Switched />
+
+            <nav className="flex gap-x-5 lg:gap-x-16 items-center">
+              {desktopLinks}
+
+              <div className="flex gap-x-1">
+                <Button style={{ fontWeight: "bold", color: "#213D34" }}>
+                  Log In
+                </Button>
+                <Button
+                  variant="contained"
+                  style={{
+                    borderRadius: "50px",
+                    fontWeight: "bold",
+                    backgroundColor: "#213D34",
+                  }}
+                >
+                  Start For Free
+                </Button>
+              </div>
+            </nav>
+          </header>
+        </div>
+
+        {/* ✅ Mobile */}
+        <header className=" pb-5 block md:hidden  ">
+          <nav className="px-5 pt-5 flex justify-between items-center ">
+            <DensityMediumIcon
+              sx={{ cursor: "pointer" }}
+              onClick={toggleMobileNav}
+            />
+          </nav>
+
+          <nav
+            ref={mobileNavRef}
+            id="navHide"
+            className=" flex-col gap-10 items-center px-5 relative top-20  z-100 "
+          >
+            <div
+              id="close"
+              className="absolute right-5 top-[-70px]  flex justify-center items-center"
+            >
+              <CloseIcon onClick={toggleMobileNav} sx={{ cursor: "pointer" }} />
+            </div>
+
+            <div className="flex flex-col gap-y-10 text-center absolute ">
+              {mobileLinks}
+              <hr className="w-[90vw]" />
+
+              <div className="flex flex-col justify-center items-center">
+                <Switched />
+
+                <Button
+                  style={{
+                    fontWeight: "bold",
+                    color: "#213D34",
+                    fontStyle: "italic",
+                  }}
+                >
+                  Log In
+                </Button>
+                <Button
+                  variant="contained"
+                  style={{
+                    borderRadius: "50px",
+                    fontWeight: "bold",
+                    backgroundColor: "#213D34",
+                    fontStyle: "italic",
+                  }}
+                >
+                  Start For Free
+                </Button>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </header>
+  );
+}
