@@ -86,7 +86,7 @@ export default function Switched() {
   if (!mounted) return null;
 
   return (
-    <FormGroup className=" bg-white dark:bg-gray-900 rounded  w-fit">
+    <FormGroup className=" bg-transparent rounded  w-fit">
       <FormControlLabel
         control={
           <MaterialUISwitch
