@@ -1,8 +1,8 @@
+import HealthJapanese from "./components/HealthJapanese";
 export default function Recipes() {
   return (
-    <section>
-      {" "}
-      <h1 className="text-4xl">Recipes</h1>
+    <section className="container mx-auto px-4 lg:px-8">
+      <HealthJapanese />{" "}
     </section>
   );
 }

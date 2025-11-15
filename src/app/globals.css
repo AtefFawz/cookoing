@@ -95,6 +95,10 @@ p {
   color: "#FFFFFF ";
   font-weight: "bold";
 }
+h6 {
+  font-size: 8px;
+  text-wrap: nowrap;
+}
 
 @media (min-width: 768px) {
   h1 {
@@ -115,6 +119,10 @@ p {
     padding: 3rem 0;
     font-size: small;
     color: rgba(0, 0, 0, 0.2);
+  }
+  h6 {
+    font-size: small;
+    text-wrap: nowrap;
   }
   section {
     margin-top: 8rem;

@@ -80,7 +80,7 @@ export default function Navbar() {
                     fontSize: "12px",
                   }}
                 >
-                  Log In
+                  <Link href="/contactUs">Log In</Link>
                 </Button>
                 <Button
                   className="w-full text-nowrap"
