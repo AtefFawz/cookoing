@@ -2,33 +2,40 @@ import {
   otherDataItem,
   HealthyItem,
 } from "@/components/data/recipes/components/HealthJapanese";
-import Image from "next/image";
+
 export default function HealthJapanese() {
-  const { AuthorIcon } = otherDataItem;
-  const iconStyle = "justify-center items-center flex flex-col ";
-  const icon =
-    "dark:bg-primary bg-gray-400 rounded-[9999px] p-2 lg:p-4  text-gray-900";
+  const { PrintIcon, ShareIcon, AuthorIcon } = otherDataItem;
+
+  const actions = [
+    { Icon: PrintIcon, text: otherDataItem.titlePrint },
+    { Icon: ShareIcon, text: otherDataItem.titleShare },
+  ];
+
+  const ICON_WRAPPER = "flex flex-col justify-center items-center";
+  const ICON_STYLE =
+    "dark:bg-primary bg-gray-400 rounded-full p-2 lg:p-4 text-gray-900";
+
   return (
     <section>
       <h1>{otherDataItem.heading}</h1>
+
+      {/* Actions (Print - Share) */}
       <div className="flex gap-4 justify-end items-center w-full py-4">
-        <div className={`${iconStyle}`}>
-          <span className={`${icon}`}>
-            <otherDataItem.PrintIcon fontSize="large" />
-          </span>
-
-          <h5> {otherDataItem.titlePrint} </h5>
-        </div>
-        <div className={`${iconStyle}`}>
-          <span className={`${icon}`}>
-            {" "}
-            <otherDataItem.ShareIcon fontSize="large" />
-          </span>
-
-          <h5> {otherDataItem.titleShare} </h5>
-        </div>
+        {actions.map((act, i) => {
+          const Icon = act.Icon;
+          return (
+            <div key={i} className={ICON_WRAPPER}>
+              <span className={ICON_STYLE}>
+                <Icon fontSize="large" />
+              </span>
+              <h5>{act.text}</h5>
+            </div>
+          );
+        })}
       </div>
-      <article className="flex items-center md:gap-4  lg:gap-10 ">
+
+      {/* Author + Healthy Items */}
+      <article className="flex items-center md:gap-4 lg:gap-10">
         <div className="flex gap-2 items-center border-r-2 border-gray-400 md:px-8 px-1">
           <span>
             <AuthorIcon />
@@ -38,18 +45,28 @@ export default function HealthJapanese() {
             <h6>{otherDataItem.authorDate}</h6>
           </div>
         </div>
-        {HealthyItem.map((item, ID) => (
-          <div
-            key={ID}
-            className="flex items-center gap-1 md:gap-4 border-r-2 border-gray-400 md:px-8 px-2"
-          >
-            <item.Icon fontSize="small" />
-            <div>
-              <h6>{item.title}</h6>
-              <h6>{item.description}</h6>
-            </div>
-          </div>
-        ))}
+
+        {HealthyItem?.length > 0 ? (
+          HealthyItem.map((item, id) => {
+            const Icon = item.Icon;
+            return (
+              <div
+                key={id}
+                className="flex items-center gap-1 md:gap-4 border-r-2 border-gray-400 md:px-8 px-2"
+              >
+                <Icon fontSize="small" />
+                <div>
+                  <h6>{item.title}</h6>
+                  {item.description && <h6>{item.description}</h6>}
+                </div>
+              </div>
+            );
+          })
+        ) : (
+          <h1 className="text-red-500 w-full text-center text-4xl py-20">
+            NOT DATA FOUND
+          </h1>
+        )}
       </article>
     </section>
   );

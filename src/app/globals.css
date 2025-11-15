@@ -99,6 +99,10 @@ h6 {
   font-size: 8px;
   text-wrap: nowrap;
 }
+input[type="radio"] {
+  accent-color: green;
+  width: 15px;
+}
 
 @media (min-width: 768px) {
   h1 {
