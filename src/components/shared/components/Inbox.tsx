@@ -1,11 +1,18 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Heading from "./Heading";
 import { InboxItem, Images } from "../../data/homeData/InboxData";
 import Button from "./Button";
 
 export default function Inbox() {
   return (
-    <section className="bg-primary dark:bg-gray-800 py-16 px-8 rounded-xl relative overflow-hidden flex flex-col justify-between h-full">
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="bg-primary dark:bg-gray-800 py-16 px-8 rounded-xl relative overflow-hidden flex flex-col justify-between h-full"
+    >
       <Heading data={InboxItem} />
 
       <div className="relative lg:w-[50%] w-full mx-auto">
@@ -33,6 +40,6 @@ export default function Inbox() {
           className="object-cover aspect-square absolute bottom-0 left-[-60px] md:left-0"
         />
       </figure>
-    </section>
+    </motion.section>
   );
 }

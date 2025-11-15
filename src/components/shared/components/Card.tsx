@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import TimerIcon from "@mui/icons-material/Timer";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SubButton from "./SubButton";
 import { DataTypeCard } from "../../data/homeData/DeliciousRecipe";
 import { useState } from "react";
+import { childAnimateRight } from "../animation/Animation";
 export default function Card(dataCard: DataTypeCard) {
   const { btn, title, photo, isBg } = dataCard;
   const [active, setActive] = useState(false);
@@ -13,10 +15,14 @@ export default function Card(dataCard: DataTypeCard) {
     setActive((prev) => !prev);
   }
   return (
-    <article
+    <motion.article
+      variants={childAnimateRight}
+      whileHover={{ boxShadow: "0 2px 10px rgba(0, 0, 0, 0.5)" }}
+      whileTap={{ boxShadow: "inset 0 2px 5px rgba(0, 0, 0, 0.2)" }}
+      transition={{ duration: 0.5 }}
       className={`${
         isBg ? "bg-primary" : "bg-[#ffffff]"
-      } dark:bg-gray-800 h-full rounded-xl flex flex-col justify-between p-1 shadow-md hover:shadow-xl transition-all duration-300`}
+      } dark:bg-gray-800 h-full rounded-xl flex flex-col justify-between p-1 shadow-md  `}
     >
       <figure className="relative">
         <Image
@@ -42,6 +48,6 @@ export default function Card(dataCard: DataTypeCard) {
         <SubButton content="30 Minutes" Icon={TimerIcon} />
         <SubButton content={btn} Icon={RestaurantIcon} />
       </div>
-    </article>
+    </motion.article>
   );
 }

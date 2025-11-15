@@ -7,7 +7,7 @@ export default function ChefOfKitchen() {
       <div className="flex md:flex-row flex-col justify-center items-center w-full ">
         <div className="flex flex-col md:w-1/2 md:order-1 order-2 px-3">
           <h2>{ItemDataKitchen.title}</h2>
-          <p id="chefKitchen" className="text-gray-500 max-w-[80%] px-3">
+          <p id="chefKitchen" className="text-gray-500 max-w-[80%] px-1">
             {ItemDataKitchen.description}
           </p>
           <div className="w-fit">

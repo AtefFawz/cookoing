@@ -86,16 +86,19 @@ export default function Switched() {
   if (!mounted) return null;
 
   return (
-    <FormGroup className=" bg-transparent rounded  w-fit">
+    <FormGroup className=" md:bg-transparent dark:bg-gray-800 bg-primary md:w-fit  w-full flex justify-around items-center dark:border-gray-900 border-primary rounded-full md:px-0 px-5  ">
       <FormControlLabel
         control={
           <MaterialUISwitch
             checked={dark}
             onChange={() => setDark(!dark)}
-            sx={{ m: 1 }}
+            sx={{
+              m: 0.2,
+            }}
           />
         }
-        label=""
+        label={`${dark ? "Dark Mod" : "Light Mode"} `}
+        style={{ padding: "2px 10px" }}
       />
     </FormGroup>
   );

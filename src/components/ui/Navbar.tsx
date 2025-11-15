@@ -32,7 +32,7 @@ export default function Navbar() {
   const desktopLinks = data.map((item, ind) => (
     <ul key={ind}>
       <li
-        className={`font-bold text-xl md:text-lg lg:text-xl ${
+        className={`font-bold text-xl md:text-[16px] lg:text-xl ${
           pathname === item.path
             ? "text-blue-500 md:border-b-2 border-blue-600"
             : "text-gray-600"
@@ -48,8 +48,10 @@ export default function Navbar() {
     <Link
       key={ind}
       href={item.path}
-      className={`font-bold text-xl ${
-        pathname === item.path ? "text-blue-500 " : "text-gray-600"
+      className={`font-bold text-xl px-5 ${
+        pathname === item.path
+          ? "text-blue-500 rounded-xl py-2 px-4 bg-gray-300  w-full"
+          : "text-gray-600"
       }`}
       onClick={toggleMobileNav}
     >
@@ -58,26 +60,37 @@ export default function Navbar() {
   ));
 
   return (
-    <header className="overflow-hidden md:px-3 lg:px-4 md:py-7 fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#ffffff] dark:bg-gray-900 shadow-lg">
+    <header
+      className={`overflow-hidden md:px-3 lg:px-4 md:py-7 fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#ffffff] dark:bg-gray-900 shadow-lg `}
+    >
       <div className="container mx-auto">
         {/* ✅ Desktop */}
         <div className="hidden md:block">
           <header className="flex flex-row justify-between items-center gap-x-7">
             <Switched />
 
-            <nav className="flex gap-x-5 lg:gap-x-16 items-center">
+            <nav className="flex md:gap-x-3 gap-7 lg:gap-x-10 xl:gap-16 items-center">
               {desktopLinks}
 
-              <div className="flex gap-x-1">
-                <Button style={{ fontWeight: "bold", color: "#213D34" }}>
+              <div className="flex gap-x-1 w-full">
+                <Button
+                  style={{
+                    fontWeight: "bold",
+                    color: "#213D34",
+                    fontSize: "12px",
+                  }}
+                >
                   Log In
                 </Button>
                 <Button
+                  className="w-full text-nowrap"
                   variant="contained"
                   style={{
                     borderRadius: "50px",
                     fontWeight: "bold",
                     backgroundColor: "#213D34",
+                    fontSize: "12px",
+                    padding: "7px",
                   }}
                 >
                   Start For Free
@@ -108,29 +121,34 @@ export default function Navbar() {
               <CloseIcon onClick={toggleMobileNav} sx={{ cursor: "pointer" }} />
             </div>
 
-            <div className="flex flex-col gap-y-10 text-center absolute ">
+            <div className="flex flex-col gap-y-10 text-start  absolute ">
               {mobileLinks}
               <hr className="w-[90vw]" />
 
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center md:gap-1 gap-3">
                 <Switched />
 
                 <Button
+                  className="w-full md:w-fit"
                   style={{
                     fontWeight: "bold",
-                    color: "#213D34",
+                    color: "#9CA3AF",
                     fontStyle: "italic",
+                    borderRadius: "9999px",
+                    backgroundColor: "#1F2937",
                   }}
                 >
                   Log In
                 </Button>
                 <Button
+                  className=" w-full md:w-fit"
                   variant="contained"
                   style={{
                     borderRadius: "50px",
                     fontWeight: "bold",
-                    backgroundColor: "#213D34",
+                    backgroundColor: "#E7F9FD",
                     fontStyle: "italic",
+                    color: "#111827",
                   }}
                 >
                   Start For Free

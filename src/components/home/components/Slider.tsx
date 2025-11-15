@@ -1,15 +1,21 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { sliderData } from "../../data/homeData/SliderData";
 import SubButton from "../../shared/components/SubButton";
 import Button from "../../shared/components/Button";
-
 export default function Slider() {
   return (
-    <section className="flex flex-col md:flex-row w-full container mx-auto h-full pt-16">
+    <motion.section
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      className="flex flex-col md:flex-row w-full container mx-auto h-full pt-10"
+    >
       {/* Column Content  */}
-      <div className="bg-primary dark:bg-gray-800 md:w-1/2 md:order-1 order-2 px-8 flex flex-col justify-center ">
+      <div className="bg-primary dark:bg-gray-800 md:w-1/2 md:order-1 order-2 px-1 flex flex-col justify-center lg:px-4">
         <h1>{sliderData.title}</h1>
-        <p className="text-colorLight xl:max-w-[70%]">
+        <p className="text-colorLight xl:max-w-[70%] ">
           {sliderData.description}
         </p>
         <div className="flex gap-5">
@@ -24,7 +30,7 @@ export default function Slider() {
               width={40}
               height={40}
               loading="lazy"
-              className=""
+              className="rounded-full "
               src={sliderData.personal.photo}
               alt={`${sliderData.personal.name} from Slider Component`}
             />
@@ -54,6 +60,6 @@ export default function Slider() {
           className="object-cover h-full "
         />
       </figure>
-    </section>
+    </motion.section>
   );
 }
