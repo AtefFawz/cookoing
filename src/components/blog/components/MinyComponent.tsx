@@ -28,8 +28,8 @@ export default function ManyComponent({ data }: { data: DataTypeArticle }) {
               src={personalImage}
               alt={personalName}
               className="object-cover aspect-square"
-              // width={30}
-              // height={30}
+              width={30}
+              height={30}
             />
           </figure>
           <div className="flex gap-5 items-center">
