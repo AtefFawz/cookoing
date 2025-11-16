@@ -22,17 +22,15 @@ export default function ManyComponent({ data }: { data: DataTypeArticle }) {
           <h4 className={`editTitle`}>{title}</h4>
           <p className={`editSpacing`}>{description}</p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-1 md:gap-4">
           <figure>
             <Image
               src={personalImage}
               alt={personalName}
-              className="object-cover aspect-square"
-              width={30}
-              height={30}
+              className="object-cover aspect-square  min-w-4"
             />
           </figure>
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-2 lg:gap-4 items-center">
             <h6 className={`editSpacing `}>{personalName}</h6>
             <p className={`editSpacing text-nowrap`}>{personalDate}</p>
           </div>
