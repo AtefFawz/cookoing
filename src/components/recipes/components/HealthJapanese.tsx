@@ -1,7 +1,7 @@
 import {
   otherDataItem,
   HealthyItem,
-} from "@/components/data/recipes/components/HealthJapanese";
+} from "@/components/data/recipes/HealthJapanese";
 
 export default function HealthJapanese() {
   const { PrintIcon, ShareIcon, AuthorIcon } = otherDataItem;

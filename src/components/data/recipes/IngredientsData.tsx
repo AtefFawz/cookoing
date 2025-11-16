@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import Chicken from "../../assets/images/recipes/OtherRecipe/Chicken.png";
 import Creamiest from "../../assets/images/recipes/OtherRecipe/Creamiest.png";
 import Rice from "../../assets/images/recipes/OtherRecipe/Rice.png";
+import Add from "../../assets/images/recipes/OtherRecipe/Ads.png";
 
 export const IngredientsItem = {
   array: [
@@ -15,6 +16,7 @@ export const IngredientsItem = {
     title: "Ingredients",
     subTitle: "For main dish",
     titleTwo: "Other Recipe",
+    photoAdd: Add,
   },
 };
 

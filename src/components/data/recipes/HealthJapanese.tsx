@@ -4,7 +4,7 @@ import TimerIcon from "@mui/icons-material/Timer";
 import PrintIcon from "@mui/icons-material/Print";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import Nutrition from "../../../assets/images/recipes/healthJapanese/Nutrition.png";
+import Nutrition from "../../assets/images/recipes/healthJapanese/Nutrition.png";
 import { StaticImageData } from "next/image";
 interface DataTypeHealth {
   title: string;

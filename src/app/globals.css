@@ -99,9 +99,9 @@ h6 {
   font-size: 8px;
   text-wrap: nowrap;
 }
-input[type="radio"] {
+input[type="checkbox"] {
   accent-color: green;
-  width: 15px;
+  border-radius: 50%;
 }
 
 @media (min-width: 768px) {

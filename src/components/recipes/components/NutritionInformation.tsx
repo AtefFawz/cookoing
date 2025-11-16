@@ -3,7 +3,7 @@ import {
   NutritionDataType,
   NutritionItem,
   otherData,
-} from "../../data/recipes/components/HealthJapanese";
+} from "../../data/recipes/HealthJapanese";
 import Error from "../../shared/components/Error";
 export default function NutritionInformation() {
   return (
@@ -32,6 +32,7 @@ export default function NutritionInformation() {
           ) : (
             <Error />
           )}
+          <p className="text-gray-500 mb-0 pb-0">{otherData.descriptionTwo}</p>
         </article>
       </div>
       <p className="text-gray-500 py-16"> {otherData.descriptionTwo} </p>
