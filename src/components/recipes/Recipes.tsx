@@ -3,7 +3,6 @@ import NutritionInformation from "./components/NutritionInformation";
 import Ingredients from "./components/Ingredients";
 import Directions from "./components//Directions";
 import Inbox from "../shared/components/Inbox";
-import DeliciousRecipes from "../home/components/DeliciousRecipe";
 import Recipe from "../home/components/Recipes";
 
 export default function Recipes() {

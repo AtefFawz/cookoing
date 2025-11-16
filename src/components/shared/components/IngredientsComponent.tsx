@@ -5,8 +5,8 @@ export default function IngredientsComponent({
   data,
   desc,
 }: {
-  data?: string;
-  desc: string;
+  data: string;
+  desc?: string;
 }) {
   const [something, setSomething] = useState(false);
 
