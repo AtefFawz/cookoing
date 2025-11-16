@@ -2,7 +2,7 @@ import {
   otherDataItem,
   HealthyItem,
 } from "@/components/data/recipes/HealthJapanese";
-
+import Error from "@/components/shared/components/Error";
 export default function HealthJapanese() {
   const { PrintIcon, ShareIcon, AuthorIcon } = otherDataItem;
 
@@ -63,9 +63,7 @@ export default function HealthJapanese() {
             );
           })
         ) : (
-          <h1 className="text-red-500 w-full text-center text-4xl py-20">
-            NOT DATA FOUND
-          </h1>
+          <Error />
         )}
       </article>
     </section>

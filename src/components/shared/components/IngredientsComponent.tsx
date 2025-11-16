@@ -1,5 +1,5 @@
 "use client";
-import { useState, useId, type ReactNode } from "react";
+import { useState, useId } from "react";
 
 export default function IngredientsComponent({
   data,
@@ -18,7 +18,7 @@ export default function IngredientsComponent({
 
   return (
     <div className="border-b-[1px]">
-      <div className="flex   items-center gap-2 lg:gap-4   border-gray-700 py-6">
+      <div className="flex items-center gap-2 lg:gap-4 border-gray-700 py-6">
         <input
           id={uniqueId}
           type="checkbox"

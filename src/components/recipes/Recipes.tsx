@@ -3,7 +3,7 @@ import NutritionInformation from "./components/NutritionInformation";
 import Ingredients from "./components/Ingredients";
 import Directions from "./components//Directions";
 import Inbox from "../shared/components/Inbox";
-import Recipe from "../home/components/Recipes";
+import RecipesToo from "./components/Recipetoo";
 
 export default function Recipes() {
   return (
@@ -11,7 +11,7 @@ export default function Recipes() {
       <HealthJapanese /> <NutritionInformation /> <Ingredients /> <Directions />
       <section>
         <Inbox />
-        <Recipe />
+        <RecipesToo />
       </section>
     </section>
   );

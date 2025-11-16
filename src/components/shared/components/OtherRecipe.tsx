@@ -3,7 +3,7 @@ import { OtherRecipe } from "../../data/recipes/IngredientsData";
 import Error from "./Error";
 export default function OtherRecipes() {
   return (
-    <article className="h-full w-full py-7 flex flex-col  justify-between gap-6">
+    <article className="h-full w-full py-2 flex flex-col justify-between gap-6">
       {OtherRecipe?.length > 0 ? (
         OtherRecipe.map((item, ID) => (
           <div key={ID} className="flex items-center  gap-4 md:gap-2 lg:gap-4">
@@ -15,13 +15,13 @@ export default function OtherRecipes() {
             <div>
               <h4
                 style={{ padding: "5px 0", margin: "5px 0" }}
-                className=" text-sm xl:text-lg"
+                className=" md:text-[11px] text-sm xl:text-lg lg:text-[13px] "
               >
                 {item.title}
               </h4>
               <p
                 style={{ padding: "5px 0", margin: "5px 0" }}
-                className="text-gray-500"
+                className=" md:text-[9px] text-sm xl:text-[12px] "
               >
                 {item.description}
               </p>
