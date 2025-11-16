@@ -14,10 +14,10 @@ export default function Heading() {
       <p>{obj.description}</p>
       <div className="relative lg:w-[50%] w-full mx-auto mt-5">
         <input
-          className="w-full h-[4rem] rounded-2xl pr-32 pl-2 text-gray-900 text-sm  border-[1px] border-gray-400 "
+          className="w-full h-[4rem] rounded-xl pr-32 pl-2 text-gray-900 text-sm  border-[1px] border-gray-400 "
           placeholder="Search article, news or recipe..."
         />
-        <div className="absolute z-10 right-1 top-0 h-full flex items-center">
+        <div className="absolute z-10 right-1 top-0 h-full flex items-center ">
           <Button content="Search" />
         </div>
       </div>
