@@ -56,7 +56,7 @@ article {
 }
 h1 {
   padding-top: 30px;
-  font-size: large;
+  font-size: x-large;
   font-weight: bolder;
 }
 h2 {
@@ -105,6 +105,7 @@ input[type="checkbox"] {
   height: 20px;
   border-radius: 50%;
 }
+
 .editSpacing {
   padding: 0;
   margin: 0;
@@ -114,6 +115,30 @@ input[type="checkbox"] {
   font-size: 8px;
   margin: 0;
   padding: 2px;
+}
+input,
+textarea {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid #6b7280;
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+}
+input:focus {
+  outline: none;
+  border: 1.5px solid green;
+  transition: all 0.3s;
+}
+textarea:focus {
+  outline: none;
+  border: 1.5px solid green;
+  transition: all 0.3s;
+}
+label {
+  font-size: smaller;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   h1 {

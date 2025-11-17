@@ -1,8 +1,8 @@
 import RecipesComponent from "../../components/recipes/Recipes";
 export default function Recipes() {
   return (
-    <article>
+    <section className="container mx-auto overflow-hidden">
       <RecipesComponent />
-    </article>
+    </section>
   );
 }

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { parentAnimate } from "@/components/shared/animation/Animation";
 import Card from "../../shared/components/Card";
 import { recipesItemCard } from "../../data/homeData/DeliciousRecipe";
-export default function RecipesToo() {
+export default function Cards() {
   return (
     <section>
       <h1 className="text-center">You may like these recipe too</h1>
