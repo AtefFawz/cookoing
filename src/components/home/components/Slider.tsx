@@ -23,19 +23,19 @@ export default function Slider() {
           <SubButton content={sliderData.btnTwo} Icon={sliderData.btnIconTwo} />
         </div>
         {/* Data Person And Button */}
-        <div className="flex justify-between items-center gap-2  mt-15 xl:mt-20">
+        <div className="flex justify-evenly items-center gap-2 mt-15 xl:mt-20 w-full">
           {/* Person */}
-          <figure className="flex gap-2 py-10 w-1/2 md:gap-x-4">
+          <figure className="flex gap-1 py-10 w-1/2 md:gap-x-4 items-center  h-full">
             <Image
-              width={40}
-              height={40}
               loading="lazy"
-              className="rounded-full "
+              className="rounded-full object-cover aspect-auto w-fit"
               src={sliderData.personal.photo}
               alt={`${sliderData.personal.name} from Slider Component`}
             />
             <figcaption>
-              <h5 className="text-sm lg:text-lg">{sliderData.personal.name}</h5>
+              <h5 className="text-[13px] lg:text-lg">
+                {sliderData.personal.name}
+              </h5>
               <h6 className="text-[12px] lg:text-sm text-nowrap1">
                 {sliderData.personal.date}
               </h6>
