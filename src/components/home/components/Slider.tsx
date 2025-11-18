@@ -13,7 +13,7 @@ export default function Slider() {
       className="flex flex-col md:flex-row w-full  h-full "
     >
       {/* Column Content  */}
-      <div className="bg-primary dark:bg-gray-800 md:w-1/2 md:order-1 order-2 px-1 flex flex-col justify-center lg:px-4">
+      <div className="bg-primary dark:bg-gray-800 md:w-1/2 md:order-1 order-2 px-4 flex flex-col justify-center ">
         <h1>{sliderData.title}</h1>
         <p className="text-colorLight xl:max-w-[70%] ">
           {sliderData.description}
@@ -23,12 +23,14 @@ export default function Slider() {
           <SubButton content={sliderData.btnTwo} Icon={sliderData.btnIconTwo} />
         </div>
         {/* Data Person And Button */}
-        <div className="flex justify-evenly items-center gap-2 mt-15 xl:mt-20 w-full">
+        <div className="flex justify-evenly  items-center gap-2 mt-15 xl:mt-20 w-full">
           {/* Person */}
-          <figure className="flex gap-1 py-10 w-1/2 md:gap-x-4 items-center  h-full">
+          <figure className="flex gap-3 py-10 w-1/2 md:gap-x-4 items-center h-full">
             <Image
               loading="lazy"
-              className="rounded-full object-cover aspect-auto w-fit"
+              width={40}
+              height={40}
+              className="rounded-full object-cover "
               src={sliderData.personal.photo}
               alt={`${sliderData.personal.name} from Slider Component`}
             />

@@ -6,7 +6,7 @@ export default function ProfessionalChef() {
 
   return (
     <section className="flex flex-col gap-8 justify-center items-center ">
-      <h1>{title}</h1>
+      <h1 className="text-center">{title}</h1>
       <figure className="flex gap-x-5 justify-center items-center">
         <Image src={photo} alt={name} />
         <figcaption className="flex gap-5">
