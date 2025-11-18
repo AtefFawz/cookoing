@@ -1,7 +1,7 @@
 import AboutComponent from "../../components/aboutUs/About";
- export default function About() {
+export default function About() {
   return (
-    <section>
+    <section className="overflow-hidden px-4 lg:px-8container mx-auto">
       <AboutComponent />
     </section>
   );

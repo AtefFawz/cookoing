@@ -8,7 +8,7 @@ import {
 export default function Directions() {
   const { title, src } = ObgSubDirections;
   return (
-    <section style={{ padding: "1rem 0", margin: "2rem 0" }}>
+    <section>
       <h1>{title}</h1>
       <figure>
         <Image

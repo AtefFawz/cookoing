@@ -25,7 +25,7 @@ export default function Card(dataCard: DataTypeCard) {
         } dark:bg-gray-800 h-full rounded-xl flex flex-col justify-between p-1 shadow-sm hover:shadow-lg duration-300`}
       >
         <figure className="relative ">
-          <div className="overflow-hidden">
+          <div className="overflow-hidden rounded-xl">
             <Image
               src={photo}
               alt={`${title} From recipes`}

@@ -6,7 +6,7 @@ export default function Fields() {
   const Img: StaticImageData = Person;
 
   return (
-    <section className="container mx-auto  w-fit">
+    <section className=" w-fit">
       <h1 className="text-center pb-32">Contact us</h1>
       <div className="flex flex-col md:flex-row gap-4 items-center h-full">
         <figure className=" w-full ">

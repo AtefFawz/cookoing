@@ -5,7 +5,7 @@ export default function Footer() {
   const WebFlow = description.split(" ").slice(-2);
   const Copy = description.split(" ").slice(0, -2);
   return (
-    <section className="border-t-[2px] py-10">
+    <section className="border-t-[1px] pt-16">
       <Image
         src={ItemFooter.photo}
         alt={ItemFooter.description}

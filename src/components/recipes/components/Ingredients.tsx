@@ -7,10 +7,7 @@ export default function Ingredients() {
   const { subTitle, titleTwo, photoAdd, title } = IngredientsItem.obgDat;
   const { array } = IngredientsItem;
   return (
-    <section
-      style={{ padding: "0", margin: "0" }}
-      className="grid grid-cols-1 md:grid-cols-3 w-full gap-5 content-between"
-    >
+    <section className="grid grid-cols-1 md:grid-cols-3 w-full gap-5 content-between">
       <article className="md:col-span-2 w-full h-full">
         <h1 className="w-fit">{title}</h1>
         <div>
