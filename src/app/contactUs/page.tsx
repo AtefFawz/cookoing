@@ -1,8 +1,8 @@
 import ContactComponent from "../../components/contactUs/ContactUs";
 export default function ContactUs() {
   return (
-    <article>
+    <section className="overflow-hidden">
       <ContactComponent />
-    </article>
+    </section>
   );
 }

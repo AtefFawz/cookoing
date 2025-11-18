@@ -7,7 +7,7 @@ import {
 import Error from "../../shared/components/Error";
 export default function NutritionInformation() {
   return (
-    <section style={{ margin: "4rem 0 0" }}>
+    <section>
       <div className=" grid grid-cols-1 md:grid-cols-3 w-full justify-between gap-5 items-center ">
         <figure className="md:col-span-2 w-full h-full ">
           <Image

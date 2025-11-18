@@ -17,36 +17,40 @@ export default function Card(dataCard: DataTypeCard) {
   return (
     <motion.article
       variants={childAnimateRight}
-      whileHover={{ boxShadow: "0 2px 10px rgba(0, 0, 0, 0.5)" }}
-      whileTap={{ boxShadow: "inset 0 2px 5px rgba(0, 0, 0, 0.2)" }}
-      transition={{ duration: 0.5 }}
-      className={`${
-        isBg ? "bg-primary" : "bg-[#ffffff]"
-      } dark:bg-gray-800 h-full rounded-xl flex flex-col justify-between p-1 shadow-md  `}
+      transition={{ duration: 1, type: "spring", ease: "easeInOut" }}
     >
-      <figure className="relative">
-        <Image
-          src={photo}
-          alt={`${title} From recipes`}
-          className="w-full aspect-video object-cover rounded-xl"
-        />
-        <figcaption>
-          <h4 className="md:px-5 px-2">{title}</h4>
-        </figcaption>
-        <div
-          onClick={handelClick}
-          className="absolute top-2 z-10 right-2 flex justify-center items-center cursor-pointer bg-[#ffffff] rounded-full p-2 overflow-hidden w-fit h-fit"
-        >
-          <FavoriteIcon
-            className={`${
-              active ? "text-red-700" : "text-gray-400"
-            } duration-800`}
-          />
+      <div
+        className={`${
+          isBg ? "bg-primary" : "bg-[#ffffff]"
+        } dark:bg-gray-800 h-full rounded-xl flex flex-col justify-between p-1 shadow-sm hover:shadow-lg duration-300`}
+      >
+        <figure className="relative ">
+          <div className="overflow-hidden">
+            <Image
+              src={photo}
+              alt={`${title} From recipes`}
+              className="w-full aspect-video object-cover rounded-xl hover:scale-125 overflow-hidden duration-300 cursor-pointer"
+            />
+          </div>
+
+          <figcaption>
+            <h4 className="md:px-5 px-2">{title}</h4>
+          </figcaption>
+          <div
+            onClick={handelClick}
+            className="absolute top-2 z-10 right-2 flex justify-center items-center cursor-pointer bg-[#ffffff] rounded-full p-2 overflow-hidden w-fit h-fit"
+          >
+            <FavoriteIcon
+              className={`${
+                active ? "text-red-700" : "text-gray-400"
+              } duration-300`}
+            />
+          </div>
+        </figure>
+        <div className="flex gap-y-2 lg:gap-x-4 md:gap-1 gap-4  pb-3 w-full ">
+          <SubButton content="30 Minutes" Icon={TimerIcon} />
+          <SubButton content={btn} Icon={RestaurantIcon} />
         </div>
-      </figure>
-      <div className="flex gap-y-2 lg:gap-x-4 md:gap-1 gap-4  pb-3 w-full ">
-        <SubButton content="30 Minutes" Icon={TimerIcon} />
-        <SubButton content={btn} Icon={RestaurantIcon} />
       </div>
     </motion.article>
   );

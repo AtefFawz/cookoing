@@ -5,7 +5,7 @@ import Card from "../../shared/components/Card";
 import { recipesItemCard } from "../../data/homeData/DeliciousRecipe";
 export default function Cards() {
   return (
-    <section>
+    <section className="h-full py-5">
       <h1 className="text-center">You may like these recipe too</h1>
       <motion.article
         variants={parentAnimate}

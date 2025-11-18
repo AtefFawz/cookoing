@@ -10,7 +10,7 @@ export default function Slider() {
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="flex flex-col md:flex-row w-full container mx-auto h-full pt-10"
+      className="flex flex-col md:flex-row w-full  h-full "
     >
       {/* Column Content  */}
       <div className="bg-primary dark:bg-gray-800 md:w-1/2 md:order-1 order-2 px-1 flex flex-col justify-center lg:px-4">

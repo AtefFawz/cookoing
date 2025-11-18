@@ -17,8 +17,7 @@ export default function HealthJapanese() {
 
   return (
     <section>
-      <h1>{otherDataItem.heading}</h1>
-
+      <h1 className="text-center">{otherDataItem.heading}</h1>
       {/* Actions (Print - Share) */}
       <div className="flex gap-4 justify-end items-center w-full py-4">
         {actions.map((act, i) => {
@@ -33,7 +32,6 @@ export default function HealthJapanese() {
           );
         })}
       </div>
-
       {/* Author + Healthy Items */}
       <article className="flex items-center md:gap-4 lg:gap-10">
         <div className="flex gap-2 items-center border-r-2 border-gray-400 md:px-8 px-1">

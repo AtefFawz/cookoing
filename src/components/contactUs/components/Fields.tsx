@@ -7,7 +7,7 @@ export default function Fields() {
 
   return (
     <section className="container mx-auto  w-fit">
-      <h1 className="text-center pb-32 text-4xl">Contact us</h1>
+      <h1 className="text-center pb-32">Contact us</h1>
       <div className="flex flex-col md:flex-row gap-4 items-center h-full">
         <figure className=" w-full ">
           <Image
@@ -16,7 +16,7 @@ export default function Fields() {
             className="object-cover aspect-auto w-full"
           />
         </figure>
-        <div className="grid lg:grid-cols-2 gap-4 w-full  items-center h-full justify-items-stretch">
+        <div className="md:grid md:grid-cols-2 flex flex-col  gap-4 w-full md:items-center h-full md:justify-items-stretch">
           <div>
             <label htmlFor="name">NAME</label>
             <input type="text" placeholder="Enter your name..." />
@@ -34,7 +34,7 @@ export default function Fields() {
 
             <select
               id="pet-select"
-              className="p-[16px] rounded-lg border-[1px] border-green-700 block w-full my-[10px]"
+              className="p-[16px] rounded-lg  block  my-[10px] "
             >
               <option value="">Advertising</option>
               <option value="complaint">Dog</option>
@@ -51,6 +51,7 @@ export default function Fields() {
           </div>
         </div>
       </div>
+      {/*  */}
       <motion.div
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.2, type: "tween", ease: "easeInOut" }}
@@ -63,9 +64,3 @@ export default function Fields() {
     </section>
   );
 }
-
-/*
-
-
-
-*/

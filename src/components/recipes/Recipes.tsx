@@ -7,7 +7,7 @@ import RecipesToo from "./components/Recipetoo";
 
 export default function Recipes() {
   return (
-    <section className="container mx-auto px-4 lg:px-8">
+    <section className="overflow-hidden">
       <HealthJapanese /> <NutritionInformation /> <Ingredients /> <Directions />
       <section>
         <Inbox />

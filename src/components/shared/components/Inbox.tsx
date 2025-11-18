@@ -15,7 +15,7 @@ export default function Inbox() {
     >
       <Heading data={InboxItem} />
 
-      <div className="relative lg:w-[50%] w-full mx-auto">
+      <div className="relative lg:w-[60%] w-full mx-auto">
         <input
           className="w-full h-[4rem] rounded-2xl pr-32 pl-2 text-gray-900 text-lg"
           placeholder="Enter your email..."

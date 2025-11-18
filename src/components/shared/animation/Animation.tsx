@@ -4,6 +4,7 @@ export const parentAnimate: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.3,
+      // duration: 0.8,
     },
   },
 };
@@ -13,7 +14,6 @@ export const childAnimateLeft: Variants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 

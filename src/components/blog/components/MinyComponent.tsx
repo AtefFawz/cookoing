@@ -27,7 +27,9 @@ export default function ManyComponent({ data }: { data: DataTypeArticle }) {
             <Image
               src={personalImage}
               alt={personalName}
-              className="object-cover aspect-square  min-w-4"
+              width={30}
+              height={30}
+              className="object-cover "
             />
           </figure>
           <div className="flex gap-2 lg:gap-4 items-center">

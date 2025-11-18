@@ -20,6 +20,6 @@ interface TypeCopyRight {
   icons: SvgIconComponent[];
 }
 export const CopyRight: TypeCopyRight = {
-  description: "© 2020 Flow base. Powered by Web flow",
+  description: "© 2020 Flow base. Powered by ,Web flow",
   icons: [InstagramIcon, FacebookIcon, TwitterIcon],
 };

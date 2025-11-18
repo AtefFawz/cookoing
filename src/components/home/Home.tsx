@@ -7,7 +7,7 @@ import DeliciousRecipes from "./components/DeliciousRecipe";
 import Inbox from "./components/Inbox";
 export default function Home() {
   return (
-    <section className="container mx-auto px-2 md:px-4 xl:px-8 overflow-hidden">
+    <section className=" overflow-hidden">
       <Slider />
       <Categories />
       <Recipes />
