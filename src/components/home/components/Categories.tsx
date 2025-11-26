@@ -27,13 +27,16 @@ export default function Categories() {
             key={index}
             className="flex flex-col items-center justify-center p-2 gap-2 text-center rounded-3xl transition-transform hover:scale-105 duration-300 w-full"
           >
-            <Image
-              width={60}
-              height={60}
-              src={item.photo}
-              alt={item.nameFood}
-              className="object-cover"
-            />
+            <div className="overflow-hidden ">
+              <Image
+                width={60}
+                height={60}
+                src={item.photo}
+                alt={item.nameFood}
+                className="object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+
             <figcaption>
               <h5>{item.nameFood}</h5>
             </figcaption>

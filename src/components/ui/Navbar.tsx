@@ -27,7 +27,6 @@ export default function Navbar() {
   function toggleMobileNav() {
     mobileNavRef.current?.classList.toggle("showNav");
   }
-
   // ✅ Desktop links
   const desktopLinks = data.map((item, ind) => (
     <ul key={ind}>
@@ -80,7 +79,12 @@ export default function Navbar() {
                     fontSize: "12px",
                   }}
                 >
-                  <Link href="/contactUs">Log In</Link>
+                  <Link
+                    href="/contactUs"
+                    className="dark:text-primary text-gray-600"
+                  >
+                    Log In
+                  </Link>
                 </Button>
                 <Button
                   className="w-full text-nowrap"
@@ -88,12 +92,14 @@ export default function Navbar() {
                   style={{
                     borderRadius: "50px",
                     fontWeight: "bold",
-                    backgroundColor: "#213D34",
+                    // backgroundColor: "#213D34",
                     fontSize: "12px",
                     padding: "7px",
                   }}
                 >
-                  Start For Free
+                  <Link href="/" className="">
+                    Start For Free
+                  </Link>
                 </Button>
               </div>
             </nav>
@@ -114,12 +120,12 @@ export default function Navbar() {
             id="navHide"
             className=" flex-col gap-10 items-center px-5 relative top-20  z-100 "
           >
-            <div
+            {/* <div
               id="close"
               className="absolute right-5 top-[-70px]  flex justify-center items-center"
             >
               <CloseIcon onClick={toggleMobileNav} sx={{ cursor: "pointer" }} />
-            </div>
+            </div> */}
 
             <div className="flex flex-col gap-y-10 text-start  absolute ">
               {mobileLinks}
@@ -138,7 +144,7 @@ export default function Navbar() {
                     backgroundColor: "#1F2937",
                   }}
                 >
-                  Log In
+                  <Link href="/contactUs">Log In</Link>
                 </Button>
                 <Button
                   className=" w-full md:w-fit"
@@ -151,7 +157,7 @@ export default function Navbar() {
                     color: "#111827",
                   }}
                 >
-                  Start For Free
+                  <Link href="/">Start For Free</Link>
                 </Button>
               </div>
             </div>
